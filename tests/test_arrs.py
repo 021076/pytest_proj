@@ -7,3 +7,8 @@ def test_get():
 def test_my_slice():
     assert arrs.my_slice([1, 2, 3, 4], 1, 3) == [2, 3]
     assert arrs.my_slice([1, 2, 3], 1) == [2, 3]
+    assert arrs.my_slice([]) == []
+    assert arrs.my_slice([1, 2, 3, 4], -1) == [4]
+    assert arrs.my_slice([1, 2, 3, 4, 5], -6) == [1, 2, 3, 4, 5]
+    assert arrs.my_slice([1, 2, 3, 4, 5], -6, 0) == []
+    assert arrs.my_slice([1, 2], 0) == [1, 2]
